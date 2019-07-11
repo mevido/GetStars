@@ -16,7 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Get Stars"
+run/main_scene="res://levels/test/Level.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=640
+window/size/height=360
 
 [rendering]
 
