@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+var my_id
 var i = 0
 const WALK_SPEED = 150
 const RUN_SPEED = 470 # about 30 mph
@@ -9,7 +10,6 @@ const T_VELOCITY = 388.84 # 40km/h when 32 pixels = 3 feet. (Wouldn't want are m
 var fall_speed = 0
 const COYOTE_TIME = .05
 var hang_time = 0
-var dir_air = 0
 
 var ladders = []
 var offset = Vector2(0,0)
@@ -38,9 +38,7 @@ func _ready():
 	Player = get_node("AnimationPlayer")
 	GFX = get_node("Sprite")
 	var extents = get_node("CollisionShape2D").shape.extents
-	print(extents)
 	offset = extents / 2
-	print(offset)
 
 func _physics_process(delta):
 	jumping = false
@@ -95,13 +93,6 @@ func _physics_process(delta):
 		else:
 			Player.play("fall")
 	
-	if state != AIR:
-		print("not air")
-		dir_air = 0
-	else:
-		print(dir_air)
-	
-	
 	if state == STAND:
 		if dir_intent.y > 0:
 			state = CROUCH
@@ -116,8 +107,8 @@ func _physics_process(delta):
 			state = STAND
 	
 	# My climbing sprites can not be horizontally flipped mid animation.
-	# This code stops the flip, but does not prevent the character from changing directions.	
-	if (state == STAND) or (state == CROUCH):
+	# This code stops the flip, but does not prevent the character from changing directions.
+	if state != CLIMB:
 		if facing == LEFT:
 			GFX.flip_h = true
 		else:

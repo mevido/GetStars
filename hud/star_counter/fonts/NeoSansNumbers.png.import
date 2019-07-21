@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bunny.png-9d67c1bfa6a1a3e845480288b9997d10.stex"
+path="res://.import/NeoSansNumbers.png-a3d6036fe010b7d4e2e990ab7959b7e4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/bunny/sprites/bunny.png"
-dest_files=[ "res://.import/bunny.png-9d67c1bfa6a1a3e845480288b9997d10.stex" ]
+source_file="res://hud/star_counter/fonts/NeoSansNumbers.png"
+dest_files=[ "res://.import/NeoSansNumbers.png-a3d6036fe010b7d4e2e990ab7959b7e4.stex" ]
 
 [params]
 
