@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Juhani Junkala Stage 1.ogg-0422ad4676de8f1a6716f8bfd6603bd1.oggstr"
+
+[deps]
+
+source_file="res://songs/Juhani Junkala Stage 1.ogg"
+dest_files=[ "res://.import/Juhani Junkala Stage 1.ogg-0422ad4676de8f1a6716f8bfd6603bd1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

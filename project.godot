@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 save_state="*res://scripts/save_state.gd"
+Audio_Controller="*res://scripts/Audio_Controller.gd"
 
 [display]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BGM_Epsilon.ogg-0ca6bab304d33ccca9b76b07b4b2323a.oggstr"
+
+[deps]
+
+source_file="res://songs/BGM_Epsilon.ogg"
+dest_files=[ "res://.import/BGM_Epsilon.ogg-0ca6bab304d33ccca9b76b07b4b2323a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

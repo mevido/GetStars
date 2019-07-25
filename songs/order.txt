@@ -1,0 +1,8 @@
+Stage1: Title Screen
+Stage Select: Opening and Closing Cutscene
+Epsilon: Level 1-10 ish
+Stage 2: Level 11-20 ish
+Boss Fight
+Alpha: Level 21-30 ish
+Omega: Level 30-40 ish?
+Menu: The top

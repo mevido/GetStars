@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Juhani Junkala Boss Fight.ogg-346021f08fe3b82a0630d4d64f41da67.oggstr"
+
+[deps]
+
+source_file="res://songs/Juhani Junkala Boss Fight.ogg"
+dest_files=[ "res://.import/Juhani Junkala Boss Fight.ogg-346021f08fe3b82a0630d4d64f41da67.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

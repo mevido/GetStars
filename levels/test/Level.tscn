@@ -73,6 +73,10 @@ script = ExtResource( 7 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Star/Area2D"]
 shape = SubResource( 3 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=[
+"Audio",
+]]
+
 [connection signal="body_entered" from="Ladder" to="Ladder" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Ladder" to="Ladder" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="Star/Area2D" to="Star" method="_on_Area2D_body_entered"]
