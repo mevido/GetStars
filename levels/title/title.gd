@@ -9,9 +9,7 @@ var timer = 0
 var transition = false
 
 func _ready():
-	players = get_tree().get_nodes_in_group("Audio")
-	players[0].set_stream(song)
-	players[0].play()
+	Audio_Controller.request_song(song)
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
@@ -19,7 +17,7 @@ func _process(delta):
 		
 	if transition:
 		timer += delta
-		players[0].set_volume_db(players[0].get_volume_db() - (timer/3))
+		Audio_Controller.set_fade(true)
 	
 	if timer > TRANSITION_TIME:
 		get_tree().change_scene_to(new_game)
