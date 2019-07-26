@@ -1,14 +1,13 @@
 extends KinematicBody2D
 
-var my_id
-var i = 0
+
 const WALK_SPEED = 150
 const RUN_SPEED = 470 # about 30 mph
 const JUMP_SPEED = -320
 const GRAVITY = 342.9568 # pixels/s^2 when 32 pixels = 3 feet.
 const T_VELOCITY = 388.84 # 40km/h when 32 pixels = 3 feet. (Wouldn't want are main character to hurt themselves would we ;) )
-var fall_speed = 0
 const COYOTE_TIME = .05
+var fall_speed = 0
 var hang_time = 0
 
 var ladders = []
@@ -22,8 +21,8 @@ enum {LEFT, RIGHT}
 var facing = RIGHT
 var dir_intent = Vector2(0,0)
 
-var Player
-var GFX
+var Player # Link to the animation player.
+var GFX # Link to the spritesheet.
 
 func near_ladder(x_pos):
 	ladders.append(x_pos)
@@ -132,5 +131,3 @@ func _physics_process(delta):
 			move.x = dir_intent.x * WALK_SPEED
 	
 	move_and_slide(move, Vector2(0,-1))
-	
-	i += 1

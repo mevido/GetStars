@@ -16,13 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Get Stars"
-run/main_scene="res://levels/test/Level.tscn"
+run/main_scene="res://scenes/level_1/level_1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-save_state="*res://scripts/save_state.gd"
 Audio_Controller="*res://scripts/Audio_Controller.gd"
+save_state="*res://scripts/save_state.gd"
 
 [display]
 

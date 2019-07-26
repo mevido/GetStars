@@ -1,25 +1,13 @@
 extends Node
 
-#level>star>player
+#var mode
+#var level
+var stars = 0
+# I also need to find a way to keep track of which stars on which levels have been grabbed.
+# Probable an array in a dictionary written to by the levels.
+var timer = 0
+var time_limit = 240 # 4 minutes
 
-var players = []
-var P_huds = []
 
-var player_totals = []
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	players = get_tree().get_nodes_in_group("Player")
-	P_huds = get_tree().get_nodes_in_group("HUD")
-	var i = 0
-	while i < players.size():
-		players[i].my_id = i
-		P_huds[i].my_id = i
-		player_totals.append(11)
-		P_huds[i].init_stars(player_totals[i])
-		
-		i += 1
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	timer += delta
