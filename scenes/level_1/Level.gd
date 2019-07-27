@@ -21,7 +21,6 @@ func _ready():
 		grabbed_stars = save_state.has_stars[name]
 		var stars = get_tree().get_nodes_in_group("Star")
 		for each in grabbed_stars:
-			print("star: " + str(each))
 			stars[each].enabled(false)
 	
 	
@@ -40,6 +39,5 @@ func leave(to: String, backtrack: bool = false):
 		if pocket.size() > 0:
 			save_state.stars = pocket[0].stars
 		save_state.has_stars[name] = grabbed_stars
-		print(save_state.has_stars[name])
 		get_tree().change_scene_to(destination)
 	pass

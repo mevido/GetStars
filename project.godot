@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Get Stars"
-run/main_scene="res://scenes/level_1/level_1.tscn"
+run/main_scene="res://scenes/story/title/title.tscn"
 config/icon="res://icon.png"
 
 [autoload]

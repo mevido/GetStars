@@ -25,12 +25,10 @@ func _process(delta):
 			if stars >= requirment:
 				Audio_Controller.play_sfx("res://objects/door/Exit 1.wav")
 				var backtrack: bool
-				print(id)
 				if id == 0:
 					backtrack = true
 				else:
 					backtrack = false
-				print(backtrack)
 				get_parent().leave(new_scene, backtrack)
 			else:
 				print("You need " + str(requirment) + " star(s) to open this door!")

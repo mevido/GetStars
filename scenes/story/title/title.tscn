@@ -1,7 +1,20 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/story/title/title.gd" type="Script" id=1]
+[ext_resource path="res://scenes/story/assets/logo.png" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Label" type="Label" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 246.835
+margin_top = 295.583
+margin_right = 388.835
+margin_bottom = 309.583
+text = "Press \"Space\" to start!"
 
