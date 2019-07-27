@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://scenes/hallway/Hallway.gd" type="Script" id=1]
+[ext_resource path="res://scenes/hallway/hallway.gd" type="Script" id=1]
 [ext_resource path="res://assets/tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://hud/star_counter/StarCounter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player/bunny/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/door/door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://player/Messy/Messy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://hud/chat/textbox.png" type="Texture" id=7]
+[ext_resource path="res://hud/chat/talking_indicator.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 200 )
@@ -30,6 +32,7 @@ new_scene = "res://scenes/level_1/level_1.tscn"
 
 [node name="door2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 575.919, 240.355 )
+new_scene = "res://scenes/void/void.tscn"
 
 [node name="Messy" parent="." instance=ExtResource( 6 )]
 position = Vector2( 440.934, 246.945 )
@@ -39,4 +42,21 @@ position = Vector2( 400, 200 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="textbox" type="Sprite" parent="."]
+position = Vector2( 321.382, 315.754 )
+texture = ExtResource( 7 )
+
+[node name="talking_indicator" type="Sprite" parent="textbox"]
+position = Vector2( 119.251, -45.3721 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="textbox"]
+self_modulate = Color( 0.2, 0.2, 0.2, 1 )
+margin_left = -236.086
+margin_top = -16.1348
+margin_right = 42.9139
+margin_bottom = 14.8652
+text = "Turn back now!
+Before you is nothing but emptiness!"
 

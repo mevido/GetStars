@@ -1,7 +1,10 @@
 extends Node
 
 #var mode
-#var level
+var level = null
+var back_track = false
+var has_stars: Dictionary = {}
+
 var stars = 0
 # I also need to find a way to keep track of which stars on which levels have been grabbed.
 # Probable an array in a dictionary written to by the levels.

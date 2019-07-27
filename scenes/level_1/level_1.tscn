@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/level_1/Level.gd" type="Script" id=1]
 [ext_resource path="res://assets/tiles.tres" type="TileSet" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://hud/star_counter/StarCounter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/star/Star.tscn" type="PackedScene" id=5]
 [ext_resource path="res://objects/door/door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://objects/star/star.png" type="Texture" id=7]
+[ext_resource path="res://hud/star_counter/fonts/NeoSansNumbers.png" type="Texture" id=8]
 
 [node name="level_1" type="Node2D"]
 script = ExtResource( 1 )
@@ -32,4 +34,22 @@ requirment = 1
 [node name="door2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 592.718, 64.0039 )
 new_scene = "res://scenes/hallway/Hallway.tscn"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 32, 320 )
+texture = ExtResource( 7 )
+centered = false
+offset = Vector2( 2, 2 )
+hframes = 6
+
+[node name="Sprite2" type="Sprite" parent="."]
+self_modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
+position = Vector2( 48, 320 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 3, 3 )
+hframes = 6
+
+[node name="Alt_Spawn" type="Position2D" parent="."]
+position = Vector2( 592, 80 )
 

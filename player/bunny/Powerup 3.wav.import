@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Powerup 3.wav-4a8ba1c192a6f7b8069adf067660622f.sample"
+
+[deps]
+
+source_file="res://player/bunny/Powerup 3.wav"
+dest_files=[ "res://.import/Powerup 3.wav-4a8ba1c192a6f7b8069adf067660622f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

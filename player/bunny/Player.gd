@@ -23,6 +23,7 @@ var dir_intent = Vector2(0,0)
 
 var Player # Link to the animation player.
 var GFX # Link to the spritesheet.
+var SFX # Link to SFX player
 
 func near_ladder(x_pos):
 	ladders.append(x_pos)
@@ -36,10 +37,13 @@ func left_ladder(x_pos):
 func _ready():
 	Player = get_node("AnimationPlayer")
 	GFX = get_node("Sprite")
+	SFX = get_node("AudioStreamPlayer2D")
 	var extents = get_node("CollisionShape2D").shape.extents
 	offset = extents / 2
 
 func _physics_process(delta):
+	if is_on_ceiling():
+		fall_speed = 0
 	jumping = false
 	# Input Handling
 	dir_intent = Vector2(0,0)
@@ -55,6 +59,7 @@ func _physics_process(delta):
 		dir_intent.y +=1
 	if Input.is_action_pressed("ui_accept"):
 		if state != AIR:
+			SFX.play()
 			fall_speed = JUMP_SPEED
 			jumping = true
 			state = AIR

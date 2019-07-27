@@ -46,4 +46,8 @@ func _on_Area2D_body_entered(body):
 
 # So the level can turn stars on and off.
 func enabled(switch: bool):
-	col_shape.set_deferred("disable", !switch)
+	if !switch:
+		col_shape.set_deferred("disabled", true)
+		set_self_modulate(Color(1, 1, 1, .25))
+	else:
+		col_shape.set_deferred("disabled", false)

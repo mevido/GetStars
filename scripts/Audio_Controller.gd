@@ -1,5 +1,7 @@
 extends Node
 
+var sfx_player
+var sfx_current
 var player
 var should_play = true
 var should_fade = false
@@ -9,6 +11,8 @@ var next_song: AudioStream
 var volume = 0
 
 func _ready():
+	sfx_player = AudioStreamPlayer.new()
+	add_child(sfx_player)
 	player = AudioStreamPlayer.new()
 	add_child(player)
 
@@ -49,4 +53,10 @@ func set_fade(fade: bool):
 	else:
 		should_fade = false
 		
-	
+
+func play_sfx(sfx: String):
+	sfx_current = load(sfx)
+	if sfx_current != null:
+		sfx_player.stop()
+		sfx_player.set_stream(sfx_current)
+		sfx_player.play()
